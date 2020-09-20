@@ -66,14 +66,6 @@ export PS1="\[\033[01;31m\]dean@\h:\[\033[01;36m\]\\w\[\033[01;35m\]\$(parse_git
         . $(brew --prefix)/etc/bash_completion
  fi
 
-#Open git repo in browser
-open_git_repo() {
-  raw=$(env -i git config --get remote.upstream.url | cut -c 5- | sed 's/.git$//' | sed 's/:/\//')
-  url= "https://${raw}"
-  open "${url}"
-}
-
-
 # Docker
 alias docker_clean_dangling='docker rmi $(docker images -qa --filter="dangling=true")'
 alias docker_clean_images='docker rmi $(docker images -qa)'
