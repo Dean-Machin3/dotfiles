@@ -1,0 +1,26 @@
+[user]
+	name = Dean Salmons-Snelton
+	email = dean.salmonssnelton@rea-group.com
+[push]
+	default = simple
+[alias]
+  st = status
+  co = checkout
+  lg = log --pretty=format:'%Cred%h%Creset %ad -%C(yellow)%d%Creset %C(bold blue)%s%Creset %C(bold green)<%an>%Creset' --date=short
+  lgg = log --pretty=format:'%Cred%h%Creset %ad -%C(yellow)%d%Creset %C(bold blue)%s%Creset %C(bold green)<%an>%Creset' --date=short --graph
+  pum = pull --ff-only upstream master
+  gui = !sh -c '/usr/local/Cellar/git/2.14.2/libexec/git-core/git-gui'
+  #deletem = branch --merged | !sh egrep -v '(^\*|master|dev)' | xargs git branch -d
+  created = log --diff-filter=A --follow --format=%aD -1 -- 
+  fixupcommit = commit --amend --no-edit
+[hub]
+	host = git.realestate.com.au
+[core]
+	editor = /usr/bin/vim
+	excludesfile = /Users/dean.salmonssnelton/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
