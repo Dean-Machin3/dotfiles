@@ -1,6 +1,6 @@
 [user]
 	name = Dean Salmons-Snelton
-	email = dean.salmonssnelton@rea-group.com
+	email = dsalmonssnelton@assemblypayments.com
 [push]
 	default = simple
 [alias]
@@ -13,8 +13,6 @@
   #deletem = branch --merged | !sh egrep -v '(^\*|master|dev)' | xargs git branch -d
   created = log --diff-filter=A --follow --format=%aD -1 -- 
   fixupcommit = commit --amend --no-edit
-[hub]
-	host = git.realestate.com.au
 [core]
 	editor = /usr/bin/vim
 	excludesfile = /Users/dean.salmonssnelton/.gitignore_global
@@ -24,3 +22,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[url "ssh://git@scm.applatform.io:7999/"]
+    insteadOf = https://scm.applatform.io/

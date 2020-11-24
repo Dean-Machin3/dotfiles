@@ -1,4 +1,4 @@
-package symlink
+package symm
 
 import (
 	"fmt"
@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 )
 
+//Symlink generates a symlink from the root user dir to the dotfile
 func Symlink(fileName string) {
 	path, err := os.Getwd()
 	if err != nil {
@@ -14,7 +15,7 @@ func Symlink(fileName string) {
 	user := os.Getenv("USER")
 	parent := filepath.Dir(path)
 	//mac specific
-	filePath := fmt.Sprintf("/Users/%v/test", user)
+	filePath := fmt.Sprintf("/Users/%v", user)
 	targetPath := filepath.Join(parent, fileName)
 	fmt.Println(targetPath)
 	fmt.Println(filePath)
