@@ -1,6 +1,7 @@
 export PATH=/usr/local/share/python:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/opt/libpq/bin:$PATH
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
 export EDITOR=nvim
 
@@ -8,6 +9,11 @@ export EDITOR=nvim
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
 
 AWS_CLI=/usr/local/bin/aws
+
+#nvm
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 #chruby
 source /usr/local/opt/chruby/share/chruby/chruby.sh

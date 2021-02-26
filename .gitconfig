@@ -10,6 +10,8 @@
   lgg = log --pretty=format:'%Cred%h%Creset %ad -%C(yellow)%d%Creset %C(bold blue)%s%Creset %C(bold green)<%an>%Creset' --date=short --graph
   pum = pull --ff-only upstream master
   gui = !sh -c '/usr/local/Cellar/git/2.14.2/libexec/git-core/git-gui'
+  fixup = commit --fixup
+  autosquash =rebase -i --autosquash
   #deletem = branch --merged | !sh egrep -v '(^\*|master|dev)' | xargs git branch -d
   created = log --diff-filter=A --follow --format=%aD -1 -- 
   fixupcommit = commit --amend --no-edit
